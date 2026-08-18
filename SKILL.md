@@ -13,7 +13,7 @@ Create raster visuals in one shared manga-ink language. Choose one output mode b
 
 Use when the image must explain a concept, mechanism, workflow, comparison, or tradeoff by itself.
 
-- Deliver a complete PNG or WebP with a finished off-white scene.
+- Deliver a complete PNG with a transparent background and short accurate labels directly inside the bitmap. Generate on a chroma-key background (`#00FF00` default), then remove it with `scripts/cutout.py` to produce the final transparent PNG.
 - Generate every essential title and label directly inside the bitmap.
 - Make the relation visible through objects, paths, states, or repeated materials; labels identify the evidence but do not replace it.
 - Do not generate an unlabeled base and add essential words in a separate rendering step.
@@ -89,7 +89,7 @@ Use this order:
 Mode A style anchor:
 
 ```text
-Professional editorial manga/comic ink illustration. Clean confident black ink outlines with varied line weights, expressive but controlled. Use classic circular halftone screentone for gray and shadow areas. Minimal cute stick-figure protagonist with round head, thin round glasses, dot eyes, simple smile, and thin line-drawn limbs. Include a chubby warm-yellow Border Collie companion. Use an off-white lightly textured real environment, not a blank white canvas. Typography is modern sans-serif, medium or bold, large and readable. Color is restrained: black, white, halftone gray, warm yellow for the dog, plus at most two muted semantic accent colors. No 3D, no glossy gradients, no photorealism, no generic card grid, no dashboard, no decorative clutter, no tiny text, no long paragraphs, no watermark.
+Professional editorial manga/comic ink illustration. Clean confident black ink outlines with varied line weights, expressive but controlled. Use classic circular halftone screentone for gray and shadow areas. Minimal cute stick-figure protagonist with round head, thin round glasses, dot eyes, simple smile, and thin line-drawn limbs. Include a chubby warm-yellow Border Collie companion. Use a perfectly uniform #00FF00 chroma-key background with no off-white, no paper texture, no canvas, and no floor plane. The cutout script will remove it to produce a transparent PNG. Typography is modern sans-serif, medium or bold, large and readable. Color is restrained: black, white, halftone gray, warm yellow for the dog, plus at most two muted semantic accent colors. No 3D, no glossy gradients, no photorealism, no generic card grid, no dashboard, no decorative clutter, no tiny text, no long paragraphs, no watermark.
 ```
 
 ### 4. Inspect and retry
@@ -128,7 +128,7 @@ with a round head, thin round glasses, dot eyes, simple smile, and thin
 line-drawn limbs. Include a chubby warm-yellow Border Collie companion.
 Color usage is extremely restrained: 90% black, white, and gray halftone;
 warm yellow only on the dog, small light patches, and sparse star accents.
-The background must be a perfectly uniform flat <KEY_COLOR> rectangle with zero
+The background must be a perfectly uniform flat #00FF00 chroma-key rectangle with zero
 gradient, texture, noise, speckles, shadows, floor plane, or lighting variation.
 Do not let halftone, ink, props, or the subject touch the image border. Keep
 generous padding. No text, no watermark. PNG format.
