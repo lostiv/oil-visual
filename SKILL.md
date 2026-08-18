@@ -9,7 +9,7 @@ Create raster visuals in one shared manga-ink language. Choose one output mode b
 
 ## Output size
 
-All images must be **1280 × 720 px (16:9 landscape)**. This is the only supported size.
+All images must be **16:9 landscape**. Use any resolution the model supports (e.g. 1024×576, 1280×720, 1536×864, 2048×1152).
 
 ## Choose the output mode
 
@@ -17,7 +17,7 @@ All images must be **1280 × 720 px (16:9 landscape)**. This is the only support
 
 Use when the image must explain a concept, mechanism, workflow, comparison, or tradeoff by itself.
 
-- Deliver a complete 1280 × 720 px PNG with a transparent background and short accurate labels directly inside the bitmap. Generate on a chroma-key background (`#00FF00` default), then remove it with `scripts/cutout.py` to produce the final transparent PNG.
+- Deliver a complete 16:9 landscape PNG with a transparent background and short accurate labels directly inside the bitmap. Generate on a chroma-key background (`#00FF00` default), then remove it with `scripts/cutout.py` to produce the final transparent PNG.
 - Generate every essential title and label directly inside the bitmap.
 - Make the relation visible through objects, paths, states, or repeated materials; labels identify the evidence but do not replace it.
 - Do not generate an unlabeled base and add essential words in a separate rendering step.
@@ -93,7 +93,7 @@ Use this order:
 Mode A style anchor:
 
 ```text
-1280 × 720 px landscape. Professional editorial manga/comic ink illustration. Clean confident black ink outlines with varied line weights, expressive but controlled. Use classic circular halftone screentone for gray and shadow areas. Minimal cute stick-figure protagonist with round head, thin round glasses, dot eyes, simple smile, and thin line-drawn limbs. Include a chubby warm-yellow Border Collie companion. Use a perfectly uniform #00FF00 chroma-key background with no off-white, no paper texture, no canvas, and no floor plane. The cutout script will remove it to produce a transparent PNG. Typography is modern sans-serif, medium or bold, large and readable. Color is restrained: black, white, halftone gray, warm yellow for the dog, plus at most two muted semantic accent colors. No 3D, no glossy gradients, no photorealism, no generic card grid, no dashboard, no decorative clutter, no tiny text, no long paragraphs, no watermark.
+16:9 landscape. Professional editorial manga/comic ink illustration. Clean confident black ink outlines with varied line weights, expressive but controlled. Use classic circular halftone screentone for gray and shadow areas. Minimal cute stick-figure protagonist with round head, thin round glasses, dot eyes, simple smile, and thin line-drawn limbs. Include a chubby warm-yellow Border Collie companion. Use a perfectly uniform #00FF00 chroma-key background with no off-white, no paper texture, no canvas, and no floor plane. The cutout script will remove it to produce a transparent PNG. Typography is modern sans-serif, medium or bold, large and readable. Color is restrained: black, white, halftone gray, warm yellow for the dog, plus at most two muted semantic accent colors. No 3D, no glossy gradients, no photorealism, no generic card grid, no dashboard, no decorative clutter, no tiny text, no long paragraphs, no watermark.
 ```
 
 ### 4. Inspect and retry
@@ -124,7 +124,7 @@ Describe the subject first, then append this fixed anchor:
 Replace `<KEY_COLOR>` with the selected hex color before sending the prompt.
 
 ```text
-1280 × 720 px landscape. Style: professional manga/comic ink illustration. Clean confident ink outlines
+16:9 landscape. Style: professional manga/comic ink illustration. Clean confident ink outlines
 with varying line weights, thick for contours and thin for details, not wobbly
 or sketchy. Heavy use of classic circular halftone screentone dot patterns for
 all gray and shadow areas. The main character is a cute minimal stick figure
